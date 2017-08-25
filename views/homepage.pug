@@ -1,0 +1,16 @@
+doctype html
+html
+    meta(charset = 'UTF-8')
+    title To Do List
+    link(rel='stylesheet' href='/stylesheets/index.css')
+    body
+      h1 Ma To Do Liste
+
+      form(action='/create', method='post')
+        input(type='text', name='title', placeholder='enter something')
+        button(type='submit') Envoyer
+
+      ul
+        each task in tasks
+          li 
+            a(href= `${task.id}`) #{task.title}

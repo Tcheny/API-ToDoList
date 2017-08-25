@@ -1,0 +1,9 @@
+body {
+  background-color: pink;
+}
+h1, form {
+  text-align: center;
+}
+input {
+  margin-right: 10px;
+}
