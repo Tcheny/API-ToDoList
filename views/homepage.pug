@@ -1,5 +1,6 @@
 doctype html
 html
+  head
     meta(charset = 'UTF-8')
     title To Do List
     link(rel='stylesheet' href='/stylesheets/index.css')
@@ -12,5 +13,6 @@ html
 
       ul
         each task in tasks
-          li 
-            a(href= `${task.id}`) #{task.title}
+          li= `${task.title} `
+            a(href= `${task.id}/delete`) X
+            a(href= `${task.id}/edit`) E

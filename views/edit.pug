@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    meta(charset = 'UTF-8')
+    title To Do List
+    link(rel='stylesheet' href='/stylesheets/index.css')
+    body
+      h1 Ma To Do Liste
+
+      form(action=`/${task.id}/edit`, method='post')
+        label(for='title') Modifiez votre tâche :
+        input(type='text', name='title', value=`${task.title}`, id='title')
+        button(type='submit') Modifier

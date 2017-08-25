@@ -8,7 +8,9 @@ const routes     = require('./routes');
 
 const app        = express();
 
-mongoose.connect('mongodb://localhost/todo',{ useMongoClient: true });
+mongoose.connect('mongodb://localhost/todo',{ useMongoClient: true }, ()=>{
+  console.log('MongoDB is running');
+});
 
 app.set('view engine', 'pug');
 app.set('views'      , path.resolve(__dirname, 'views'));
