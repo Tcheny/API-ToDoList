@@ -5,14 +5,24 @@ html
     title To Do List
     link(rel='stylesheet' href='/stylesheets/index.css')
     body
-      h1 Ma To Do Liste
+      div.container
+        h1 Ma To Do Liste
 
-      form(action='/create', method='post')
-        input(type='text', name='title', placeholder='enter something')
-        button(type='submit') Envoyer
+        form(action='/create', method='post')
+          label(for='title') Qu'est qu'on fait ?
+          input(type='text', name='title', placeholder='enter something')
+          label(fo='detail') plus
+          input(type='text', name='detail', placeholder='enter something')
 
-      ul
-        each task in tasks
-          li= `${task.title} `
-            a(href= `${task.id}/delete`) X
-            a(href= `${task.id}/edit`) E
+          button(type='submit') Envoyer
+
+        ul
+          each task in tasks
+            if task.detail !== ''
+              li= `${task.title} ${task.detail}` 
+                a(href= `${task.id}/delete`) Delete
+                a(href= `${task.id}/edit`) Edit
+            else
+              li= `${task.title}`
+                a(href= `${task.id}/delete`) Delete
+                a(href= `${task.id}/edit`) Edit

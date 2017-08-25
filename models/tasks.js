@@ -5,7 +5,8 @@ const Schema = mongoose.Schema;
 
 const taskSchema = new Schema({
   title: { type: String },
-  completed: { type: Boolean }
+  completed: { type: Boolean },
+  detail: { type : String }
 });
 
 // création du model 'Task' qui est relié a la collection "tasks" de MGDB

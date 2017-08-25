@@ -1,9 +1,24 @@
 body {
   background-color: pink;
 }
-h1, form {
+h1 {
   text-align: center;
 }
 input {
   margin-right: 10px;
+}
+li {
+ list-style-type: circle;
+ /*margin-left: 220px;*/
+}
+.container{
+  width: 50%;
+  margin: 0 auto;
+}
+a {
+  float: right;
+  margin-right: 10px;
+}
+label, button {
+  display: block;
 }
