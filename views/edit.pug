@@ -2,12 +2,16 @@ doctype html
 html
   head
     meta(charset = 'UTF-8')
-    title To Do List
+    title ToDo List
     link(rel='stylesheet' href='/stylesheets/index.css')
     body
-      h1 Ma To Do Liste
+      div.container
 
-      form(action=`/${task.id}/edit`, method='post')
-        label(for='title') Modifiez votre tâche :
-        input(type='text', name='title', value=`${task.title}`, id='title')
-        button(type='submit') Modifier
+        h1 EDIT YOUR TASK : </br> #{task.title}
+
+        form(action=`/${task.id}/edit`, method='post')
+          label(for='title') Task : 
+          input(type='text', name='title', value=`${task.title}`, id='title')
+          label(for='time') When ? 
+          input(name='time', value=`${task.time}`, id='time')
+          button(type='submit') UPDATE

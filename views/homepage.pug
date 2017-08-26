@@ -2,27 +2,27 @@ doctype html
 html
   head
     meta(charset = 'UTF-8')
-    title To Do List
+    title ToDo List
     link(rel='stylesheet' href='/stylesheets/index.css')
     body
       div.container
-        h1 Ma To Do Liste
+        h1 MY AWESOME TODO LIST
 
         form(action='/create', method='post')
-          label(for='title') Qu'est qu'on fait ?
-          input(type='text', name='title', placeholder='enter something')
-          label(fo='detail') plus
-          input(type='text', name='detail', placeholder='enter something')
-
-          button(type='submit') Envoyer
+          label(for='title') Add task : 
+          input(type='text', name='title', placeholder='~Todo~')
+          label(fo='time') When ? 
+          input(type='text', name='time', placeholder='~When~')
+          button(type='submit') SEND
 
         ul
           each task in tasks
-            if task.detail !== ''
-              li= `${task.title} ${task.detail}` 
+            if task.time !== ''
+              li <strong>#{task.title}</strong> <em> (when : #{task.time})</em>
                 a(href= `${task.id}/delete`) Delete
                 a(href= `${task.id}/edit`) Edit
             else
-              li= `${task.title}`
+              li <strong>#{task.title}</strong>
                 a(href= `${task.id}/delete`) Delete
                 a(href= `${task.id}/edit`) Edit
+                

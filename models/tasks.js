@@ -1,13 +1,13 @@
 // Interface entre express et mondodb
-const mongoose = require('mongoose');
+const mongoose   = require('mongoose');
 
-const Schema = mongoose.Schema;
+const Schema     = mongoose.Schema;
 
 const taskSchema = new Schema({
   title: { type: String },
   completed: { type: Boolean },
-  detail: { type : String }
+  time: { type : String }
 });
 
 // création du model 'Task' qui est relié a la collection "tasks" de MGDB
-module.exports = mongoose.model('Task', taskSchema);
+module.exports   = mongoose.model('Task', taskSchema);

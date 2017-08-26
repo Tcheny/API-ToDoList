@@ -8,7 +8,7 @@ const routes     = require('./routes');
 
 const app        = express();
 
-mongoose.connect('mongodb://localhost/todo',{ useMongoClient: true }, ()=>{
+mongoose.connect('mongodb://localhost/todo', { useMongoClient: true }, ()=>{
   console.log('MongoDB is running');
 });
 

@@ -1,8 +1,8 @@
-const express  = require('express');
+const express   = require('express');
 
-const Task     = require('./models/tasks.js');
+const Task      = require('./models/tasks.js');
 
-const router   = express.Router(); // gestionnaire de route
+const router    = express.Router(); // gestionnaire de route
 
 // Afficher la liste de notre DataBase mongodb
 // ======================
@@ -46,4 +46,4 @@ router.get("/:id/delete", (req, res) => {
 });
 
 
-module.exports = router;
+module.exports  = router;
